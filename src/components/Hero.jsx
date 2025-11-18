@@ -1,4 +1,5 @@
 import Spline from '@splinetool/react-spline'
+import TrustBar from './TrustBar'
 
 const brandBlue = '#146cb6'
 
@@ -20,35 +21,38 @@ export default function Hero() {
         <div className="max-w-3xl">
           <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 backdrop-blur-md">
             <span className="h-2 w-2 rounded-full" style={{ backgroundColor: brandBlue }} />
-            <span className="text-xs font-medium text-white/90">Enterprise Funeral Management</span>
+            <span className="text-xs font-medium text-white/90">AI-Powered Pre-Need Growth</span>
           </div>
           <h1 className="mt-6 text-4xl sm:text-6xl font-semibold tracking-tight text-white">
-            Dignified service, powered by modern software
+            Grow Your Funeral Business with AI-Powered Pre-Need Tools
           </h1>
-          <p className="mt-6 text-lg text-slate-200/90">
-            A complete operating system for funeral homes and mortuaries—case management, scheduling, compliance, and family portals. Seamless, secure, and built for mogul-class operations.
+          <p className="mt-4 text-base sm:text-lg text-slate-200/90">
+            CRM • AI Chat • Guestbook • Lead Generation — All built specifically for the funeral profession.
           </p>
-          <div className="mt-8 flex flex-col sm:flex-row gap-3">
+          <div className="mt-6 flex flex-col sm:flex-row gap-3">
             <a
               href="#demo"
               className="inline-flex items-center justify-center rounded-xl px-5 py-3 text-white font-semibold shadow-lg"
               style={{ backgroundColor: brandBlue }}
             >
-              Book a demo
+              Schedule a Demo
             </a>
             <a
-              href="#features"
+              href="#pricing"
               className="inline-flex items-center justify-center rounded-xl px-5 py-3 font-semibold text-white/90 border border-white/20 hover:bg-white/10 transition"
             >
-              Explore features
+              See Plans & Pricing
             </a>
           </div>
+
+          <TrustBar />
+
           <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-6 text-left">
             {[
               ['99.99%','Uptime'],
               ['SOC 2','Compliant'],
               ['24/7','Priority Support'],
-              ['500+','Locations']
+              ['100+','Clients']
             ].map(([k,v]) => (
               <div key={k} className="rounded-2xl border border-white/10 bg-slate-900/40 p-4 backdrop-blur">
                 <div className="text-2xl font-bold text-white">{k}</div>

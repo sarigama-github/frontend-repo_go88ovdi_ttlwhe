@@ -25,22 +25,30 @@ export default function Navbar() {
                 <div className="h-6 w-6 rounded bg-[--brand-blue]"></div>
               </div>
               <style>{`:root{--brand-blue:${brandBlue}}`}</style>
-              <div className="text-white font-semibold tracking-tight">Mogul Funeral Suite</div>
+              <div className="text-white font-semibold tracking-tight">Mobile Clients</div>
             </div>
             <nav className="hidden md:flex items-center gap-1">
-              <NavLink>Solutions</NavLink>
-              <NavLink>Platform</NavLink>
-              <NavLink>Pricing</NavLink>
-              <NavLink>Resources</NavLink>
-              <NavLink>Contact</NavLink>
+              <NavLink href="#services">Services</NavLink>
+              <NavLink href="#features">Platform</NavLink>
+              <NavLink href="#pricing">Pricing</NavLink>
+              <NavLink href="#academy">Resources</NavLink>
+              <NavLink href="#about">About</NavLink>
+              <NavLink href="#contact">Contact</NavLink>
             </nav>
             <div className="hidden md:flex items-center gap-3">
-              <button
+              <a
+                href="#pricing"
+                className="px-4 py-2 text-sm font-semibold text-white/90 border border-white/20 rounded-xl"
+              >
+                See Pricing
+              </a>
+              <a
+                href="#demo"
                 className="px-4 py-2 text-sm font-semibold text-white rounded-xl shadow-lg"
                 style={{ backgroundColor: brandBlue }}
               >
-                Book a demo
-              </button>
+                Schedule a Demo
+              </a>
             </div>
             <button className="md:hidden text-white" onClick={() => setOpen(!open)} aria-label="Toggle menu">
               {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -49,17 +57,19 @@ export default function Navbar() {
           {open && (
             <div className="md:hidden border-t border-white/10 px-4 py-4">
               <div className="flex flex-col gap-2">
-                <NavLink>Solutions</NavLink>
-                <NavLink>Platform</NavLink>
-                <NavLink>Pricing</NavLink>
-                <NavLink>Resources</NavLink>
-                <NavLink>Contact</NavLink>
-                <button
-                  className="mt-2 px-4 py-2 text-sm font-semibold text-white rounded-xl shadow-lg"
+                <NavLink href="#services">Services</NavLink>
+                <NavLink href="#features">Platform</NavLink>
+                <NavLink href="#pricing">Pricing</NavLink>
+                <NavLink href="#academy">Resources</NavLink>
+                <NavLink href="#about">About</NavLink>
+                <NavLink href="#contact">Contact</NavLink>
+                <a
+                  href="#demo"
+                  className="mt-2 px-4 py-2 text-sm font-semibold text-white rounded-xl shadow-lg text-center"
                   style={{ backgroundColor: brandBlue }}
                 >
-                  Book a demo
-                </button>
+                  Schedule a Demo
+                </a>
               </div>
             </div>
           )}
